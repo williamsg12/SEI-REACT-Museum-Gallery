@@ -7,6 +7,7 @@ import Navigation from './Navigation';
 import About from './About';
 import Gallery from './Gallery';
 import Search from './Search'
+import SearchForm from './SearchForm';
 
 function App() {
 	const [searchOptions, setSearchOptions] = useState({
@@ -44,12 +45,12 @@ function App() {
 							<Gallery images={galleryImages} searchOptions={searchOptions} />
 						)}
 					/>
-					{/* <Route
+					<Route
 						exact
 						path='/search'
 						render={() => <Search searchOptions={searchOptions} />}
 					/>
-					; */}
+					;
 					<Redirect path='*' to='/home' />
 				</Switch>
 			</main>
